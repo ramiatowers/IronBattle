@@ -1,15 +1,13 @@
 public class Auxiliar {
 // ---------- UTILIDADES
-/*
- hp random between 100-200 to warriors and 50-100 for wizards
- */
+
 public static int topHP(int hp){
-    if(hp < 100){
-        System.out.println("Health can't be lower than 100; Health set up to 100");
-        return 100;
-    } else if (hp > 200) {
-        System.out.println("Health can't be higher than 200; Health set up to 100");
-        return 100;
+    if(hp < 50 ){
+        System.out.println("Health can't be lower than 50; Health set up to 50");
+        return 50;
+    } else if (hp > 100) {
+        System.out.println("Health can't be higher than 100; Health set up to 50");
+        return 50;
     }else{
         return hp;
     }

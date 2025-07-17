@@ -64,6 +64,8 @@ that will take a character as a parameter and reduce that character's health bas
         this.intelligence = intelligence;
     }
 
+
+
     //    MÉTHOD DESDE ATTACKER
 
    /*
@@ -94,6 +96,8 @@ that will take a character as a parameter and reduce that character's health bas
     Tendría que crear una variable que escoja random entre uno y otro ¿? >> ifelseo ¿? do while¿? switch ¿?
 
      */
+
+//    PELEA
     @Override
     public void attack(Character target) {
 
