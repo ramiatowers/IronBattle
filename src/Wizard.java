@@ -4,8 +4,6 @@ import java.util.Random;
 
 public class Wizard extends Character implements Attacker {
 
-
-
     private int mana;
     private int intelligence;
     Random r = new Random();
@@ -16,7 +14,7 @@ public class Wizard extends Character implements Attacker {
         super(name, topHP(hp));
         this.mana = topMana(mana);
         this.intelligence = topIntelligence(intelligence);
-        System.out.println("Character created! " + toString());
+        System.out.println("Character created! " + this);
 
     }
 
@@ -80,34 +78,6 @@ public class Wizard extends Character implements Attacker {
 
     //    MÉTHOD DESDE ATTACKER
 
-   /*
-    Wizards are the masters of the arcane their main attribute is intelligence.
-    Every round a wizard will try to randomly cast either a Fireball or a Staff hit.
-
-    If a wizard does not have the mana to cast a Fireball he will do a Staff hit instead.
-
-    If a wizard does not have the mana to cast a Staff hit he will not inflict any damage and recover his mana by 2.
-
-  ----------------------------------------------------------
-
-    dos funciones individuales que tengan el otro character como parámetro y eso luego ya para attack()
-    OJO que casi te dejas la de recover
-
-    usar variantes ya creadas de intellegence y mana
-
-    FIREBALL  The damage of a Fireball is equal to his intelligence
-    and every Fireball will decrease their mana by 5 points.
-
-    STAFF HIT The damage of a staff hit is equal to 2.
-    Every staff hit will recover his mana by 1.
-
-    RECOVER If a wizard does not have the mana to cast a Staff hit
-    he will not inflict any damage and recover his mana by 2.
-
-    Tengo que quitar hp del oponente (setter y getters)
-    Tendría que crear una variable que escoja random entre uno y otro ¿? >> ifelseo ¿? do while¿? switch ¿?
-
-     */
 
 //    PELEA
     @Override
@@ -153,9 +123,8 @@ public class Wizard extends Character implements Attacker {
             default:
                 System.out.println("Aren't you like dead or something");
                 break;
+
         }
-
-
     }
 
     public void fireBall(Character opponent){
@@ -190,7 +159,7 @@ public class Wizard extends Character implements Attacker {
                 '\n'+ "Character type: Wizard" + '\n'+
                 "-------------------------------" + '\n'+
                 "Name: " + getName() + '\n'+
-                "Health: " + super.getHp() + '\n'+
+                "Health: " + getHp() + '\n'+
                 "Mana: " + mana + '\n'+
                 "Intelligence: " + intelligence  + '\n';
     }
